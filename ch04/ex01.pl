@@ -2,7 +2,7 @@
 use strict;
 
 sub total {
-    my $total;
+    my $total = 0;
     foreach (@_) {
         $total += $_;
     }
