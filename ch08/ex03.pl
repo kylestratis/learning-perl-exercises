@@ -3,7 +3,8 @@
 while (<>) {
 # take one input line at a time
     chomp;
-    if (/(\w+a)/) {
+    if (/(b\w+a\b)/) {
+        print "Matched: |$`<$&>$'|\n"; # the special match vars
         print "\$1 contains '$1'\n";
     } else {
     print "No match: |$_|\n";
