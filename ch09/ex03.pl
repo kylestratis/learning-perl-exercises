@@ -17,6 +17,9 @@ if (! open $out_fh, '>', $output) {
 }
 
 while(<$in_fh>) {
-    s/fred/Larry/ig;
-    print  "$_\n";
+    chomp;
+    s/Fred/\n/ig;
+    s/wilma/Fred/ig;
+    s/\n/Wilma/g;
+    print "$_\n";
 }
