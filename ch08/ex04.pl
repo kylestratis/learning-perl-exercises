@@ -3,7 +3,7 @@
 while (<>) {
 # take one input line at a time
     chomp;
-    if (/(?<word>\w+a)/) {
+    if (/(?<word>\b\w*a\b)/) {
          print "Matched: |$`<$&>$'|\n"; # the special match vars
         print "'word' contains '$+{word}'\n";
     } else {
