@@ -7,7 +7,7 @@ if ($dirname =~ /\S/) {
     print "In $dirname\n";
 }
 else {
-    chdir;
+    chdir or die "Can not chdir to home: $!";
     print "In home directory\n";
 }
 
